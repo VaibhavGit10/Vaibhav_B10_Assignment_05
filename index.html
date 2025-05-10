@@ -7,5 +7,17 @@
 <body>
     <h1>Hello from CI/CD Pipeline!!</h1>
     <p>This is a test deployment.</p>
+    <p>Current date and time: <span id="datetime"></span></p>
+    <script>
+        // Function to update the date and time
+        function updateDateTime() {
+            const now = new Date();
+            document.getElementById('datetime').innerText = now.toLocaleString();
+        }
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial call to set the date and time immediately
+        </script>
 </body>
 </html>
